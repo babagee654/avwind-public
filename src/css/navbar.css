@@ -1,0 +1,133 @@
+:root {
+  --main-bg-color: #DF7B1D;
+  --secondary-bg-color: #E9F9FF;
+  --accent-bg-color: #FF9F2F;
+  --accent-text-color: #2A7479;
+  --vw-padding: calc(100vw/ 40);
+  --image-font: calc(100vw / 40);
+  --line: calc(var(--image-font) * 2);
+  --move: calc(-1.5 * var(--line));
+}
+
+/* Navbar */
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 98.2px;
+  width: 100%;
+  align-items: center;
+  background-color: var(--main-bg-color) ;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.navbar-logo {
+  padding-left: var(--vw-padding);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  object-fit: cover;
+  max-width: 200px;
+}
+
+.navbar-page-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  height: calc(100% + 2rem);
+}
+
+.navbar-contact {
+  background-color: var(--accent-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav-link:hover{
+  color: white;
+  transition: 0.3s;
+}
+
+.active-nav-link {
+  color:white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar-menu {
+  display: none;
+}
+
+.burger-btn{
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  border-radius: 3px;
+}
+
+@media screen AND (max-width: 768px) {
+  .menu-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: 1.5rem;
+      height: 3rem;
+      width: 3rem;
+      background-color: transparent;
+      border: 3px solid white;
+      border-radius: 5px;
+  }
+
+  .navbar {
+      display: flex;
+  }
+
+  .navbar-page-links {
+      display: none !important;
+  }
+
+  .navbar-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 0.5rem;
+      background-color: var(--accent-bg-color);
+      width: 100%;
+      min-height: 30vh;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+      border-top: 2px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .navbar-menu > a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+}
+
+@media screen AND (max-width: 480px) {
+} 
